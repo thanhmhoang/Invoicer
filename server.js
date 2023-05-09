@@ -2,6 +2,7 @@ const express = require('express');
 const sequelize = require("./config/connection")
 const session = require('express-session');
 const SequelizeStore = require('connect-session-sequelize')(session.Store);
+const allRoutes = require("./controllers")
 
 const app = express();
 const PORT = process.env.PORT ||3000;
@@ -14,18 +15,16 @@ const sess = {
     resave: false,
     saveUninitialized: true,
     store: new SequelizeStore({
-        db: sequelize
-    })
+        db: sequelize,
+    }),
 };
+
+app.use(session(sess));
 
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
-app.use(session(sess))
-
-//const allRoutes = require("./routes")
-
-//app.use(allRoutes)
+app.use(allRoutes);
 
 sequelize.sync({force:false}).then(()=>{
     app.listen(PORT,()=>{
