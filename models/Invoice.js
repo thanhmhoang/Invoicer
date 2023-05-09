@@ -39,13 +39,13 @@ Invoice.init(
                 isDate: true,
             }
         },
-        department: {
-            type: DataTypes.STRING,
-            allowNull: false,
-            validate: {
-                max: 20,
-            },
-        },
+        // department: {
+        //     type: DataTypes.STRING,
+        //     allowNull: false,
+        //     validate: {
+        //         max: 20,
+        //     },
+        // },
         department_id: {
             type: DataTypes.INTEGER,
             references: {
