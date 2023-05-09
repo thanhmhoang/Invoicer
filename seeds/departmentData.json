@@ -1,0 +1,14 @@
+[
+    {
+      "dept_name": "Produce",
+      "user_id": 1
+    },
+    {
+      "dept_name": "Meat",
+      "user_id": 1
+    },
+    {
+      "name": "Dried Goods",
+      "user_id": 1
+    }
+  ]
