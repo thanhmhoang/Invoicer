@@ -23,9 +23,9 @@ app.use(express.urlencoded({ extended: true }));
 
 app.use(session(sess))
 
-const allRoutes = require("./controllers")
+//const allRoutes = require("./routes")
 
-app.use(allRoutes)
+//app.use(allRoutes)
 
 sequelize.sync({force:false}).then(()=>{
     app.listen(PORT,()=>{
