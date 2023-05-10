@@ -1,10 +1,10 @@
 const form = document.querySelector("#login-form");
 const userType = document.querySelector("#user-type");
 
-const login = async (e) => {
-  // user login
+const signup = async (e) => {
+  // user signup
   if (userType.checked) {
-    const response = await fetch("/api/user/login", {
+    const response = await fetch("/api/user", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({
@@ -20,4 +20,4 @@ const login = async (e) => {
   } 
 };
 
-form.addEventListener("submit", login);
+form.addEventListener("submit", signup);
