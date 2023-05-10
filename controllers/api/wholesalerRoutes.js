@@ -1,6 +1,16 @@
 const router = require('express').Router()
 const { Wholesaler } = require('../../models')
 
+router.get("/", async (req, res) => {
+    try {
+        const wholesaleData = await Wholesaler.findAll()
+        res.status(200).json(wholesaleData)
+    } catch (err) {
+        console.log(err)
+        res.status(500).json(err)
+    }
+})
+
 router.post('/', async (req, res) => {
     try {
         const wholeSaleData = await Wholesaler.create({

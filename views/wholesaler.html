@@ -2,12 +2,20 @@
 
 <h1>Add a Wholesaler!</h1>
 
-<div class = 'container'>
-    <!-- This is an input form with three input boxes
-    Business Name
-    Email
-    Phone Number -->
+<div class = 'addWholeSaler'>
+    <form id="wholesaler-form">
+    <label for="wholesaler">Wholesaler Name: </label>
+            <input type="text" id="wholesaler">
+    <label for="email">Email: </label>
+            <input type="email" id="email" size="30" required>
+    <label for="phonenumber">Phone Number: </label>
+            <input type="tel" id="phone" name="phone"
+       pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}"
+       required>
+    </form>
+    
 </div>
 
-<button id="createBtn">Create</button>
-<button id="nextBtn">Next</button>
+<button type='submit' value="submit">Create</button>
+<button class="nextBtn" type="button">Next</button>
+
