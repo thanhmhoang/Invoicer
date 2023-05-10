@@ -7,9 +7,9 @@ router.get("/", async (req, res) => {
         res.status(200).json(invoiceData)
     } catch (err) {
         console.log(err)
-        res.status(500).json(err)
+        res.status(500).json({ error: 'Failed to retrieve invoice data' })
     }
-})
+});
 
 router.get("/:id", async (req, res) => {
     try {
@@ -62,7 +62,7 @@ router.post('/', async (req, res) => {
         res.status(200).json(invoiceData);
     } catch (err) {
         console.log(err)
-        res.status(500).json(err)
+        res.status(500).json({ error: 'Cannot create invoice' });
     }
 });
 
@@ -82,7 +82,7 @@ router.put('/:id', async (req, res) => {
         };
         res.status(200).json(invoiceData)
     } catch (err) {
-        res.status(500).json(err)
+        res.status(500).json({ error: 'Failed to update invoice' });
     }
 });
 
