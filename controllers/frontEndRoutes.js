@@ -2,7 +2,7 @@ const express = require('express');
 const router = require('express').Router();
 const {Invoice, User, Department, Wholesaler} = require('../models');
 
-router.get("/",(req,res)=>{
+router.get("/", async (req,res)=>{
     Invoice.findAll({
         include:[User]
     }).then(invData=>{
@@ -15,7 +15,7 @@ router.get("/",(req,res)=>{
     })
 })
 
-router.get("/invoice/:id",(req,res)=>{
+router.get("/invoice/:id", async (req,res)=>{
     Invoice.findByPk(req.params.id,{
         include:[User]
     }).then(invData=>{
@@ -26,7 +26,7 @@ router.get("/invoice/:id",(req,res)=>{
     })
 })
 
-router.get("/department/invoice/:id",(req,res)=>{
+router.get("/department/invoice/:id", async (req,res)=>{
     Invoice.findByPk(req.params.id,{
         include:[Department]
     }).then(invData=>{
@@ -37,7 +37,7 @@ router.get("/department/invoice/:id",(req,res)=>{
     })
 })
 
-router.get("/login",(req,res)=>{
+router.get("/login", async (req,res)=>{
     if(req.session.logged_in){
         return res.redirect("/home")
     }
@@ -46,7 +46,20 @@ router.get("/login",(req,res)=>{
     })
 })
 
-router.get("/home",(req,res)=>{
+router.get("/signup", async (req,res) => {
+    try {
+      if (req.session.userId) {
+        res.redirect("/dashboard")
+      } else {
+        res.render("signup")
+      }
+    } catch (error) {
+      console.log(error)
+      res.status(500).json(error);
+    }
+  })
+
+router.get("/home", async (req,res)=>{
     if(!req.session.logged_in){
         return res.redirect("/login")
     } else {
