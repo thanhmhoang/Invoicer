@@ -1,5 +1,5 @@
 const form = document.querySelector("#login-form");
-const userType = document.querySelector("#user-type");
+//const userType = document.querySelector("#user-type");
 
 const login = async (e) => {
   // user login
