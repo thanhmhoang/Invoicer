@@ -16,4 +16,4 @@ const submit = async (e) => {
     console.log(response);
   };
   
-  pigForm.addEventListener("submit", submit);
+  wholesalerForm.addEventListener("submit", submit);
