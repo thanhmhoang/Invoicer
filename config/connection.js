@@ -9,7 +9,7 @@ if (process.env.JAWSDB_URL) {
   sequelize = new Sequelize(
     "invoice_db",
     "root",
-    "password",
+    "TheItBoys#1!",
     {
       host: '127.0.0.1',
       dialect: 'mysql',
