@@ -1,6 +1,17 @@
 const router = require('express').Router()
 const { Department, Invoice } = require("../../models")
 
+router.get("/", async (req, res) => {
+  try {
+      const departmentData = await Department.findAll()
+      res.status(200).json(departmentData)
+  } catch (err) {
+      console.log(err)
+      res.status(500).json(err)
+  }
+})
+
+
 router.post('/', async(req, res) => {
     try {
         const departmentData = await Department.create({

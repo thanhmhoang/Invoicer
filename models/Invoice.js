@@ -33,7 +33,7 @@ Invoice.init(
             }
         },
         pay_date: {
-            type: DataTypes.INTEGER,
+            type: DataTypes.STRING,
             allowNull: false,
             validate: {
                 isDate: true,
