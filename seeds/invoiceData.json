@@ -4,9 +4,17 @@
       "description": "50lbs of Potatoes, 25lbs of Red Onions, 10lbs of Asparagus",
       "pay_amount": 500,
       "pay_date": "6-15-23",
-      "department_id": "1",
+      "department_id": 1,
       "wholesaler_id": 1
     },
+    {
+        "invoice_num": "45457",
+        "description": "5 Boxes of Whole Chicken, 50lbs Beef Ribs",
+        "pay_amount": 1000,
+        "pay_date": "6-30-23",
+        "department_id": 2,
+        "wholesaler_id": 2
+      },
     {
       "invoice_num": "6789",
       "description": "15lbs Ground Beef, 10lbs Chicken Breast, 20lbs Pork Ribs",

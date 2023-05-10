@@ -2,19 +2,19 @@
     {
       "name": "Walt's Meats",
       "email": "walt@gmail.com",
-      "phone": 2062061234,
+      "phone": "2062061234",
       "user_id": 1
     },
     {
       "name": "Charlie's Produce",
       "email": "charlie@gmail.com",
-      "phone": 4257891234,
+      "phone": "4257891234",
       "user_id": 1
     },
     {
       "name": "Foodie Foods",
       "email": "foodie@gmail.com",
-      "phone": 2067021818,
+      "phone": "2067021818",
       "user_id": 1
     }
   ]
