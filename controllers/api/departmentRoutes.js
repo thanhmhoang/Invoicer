@@ -7,9 +7,9 @@ router.get("/", async (req, res) => {
       res.status(200).json(departmentData)
   } catch (err) {
       console.log(err)
-      res.status(500).json(err)
+      res.status(500).json({ error: 'Cannot retrieve department data' })
   }
-})
+});
 
 
 router.post('/', async(req, res) => {
@@ -21,11 +21,11 @@ router.post('/', async(req, res) => {
         res.status(200).json(departmentData)
     } catch (err) {
         console.log(err)
-        res.status(500).json(err)
+        res.status(500).json({ error: 'Cannot create department' })
     }
 });
 
-router.get('/', async (req, res) => {
+router.get('/department-invoice', async (req, res) => {
 
     try {
       const data = await Department.findAll({
@@ -34,7 +34,8 @@ router.get('/', async (req, res) => {
   
       res.status(200).json(data)
     } catch (err) {
-      res.status(500).json(err)
+      res.status(500).json({ error: 'Cannot retrieve department invoices' })
+
     }
   });
   
