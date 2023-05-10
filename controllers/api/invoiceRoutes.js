@@ -1,5 +1,53 @@
 const router = require('express').Router();
-const { Invoice } = require('../../models');
+const { Invoice, Department } = require('../../models');
+
+router.get("/", async (req, res) => {
+    try {
+        const invoiceData = await Invoice.findAll()
+        res.status(200).json(invoiceData)
+    } catch (err) {
+        console.log(err)
+        res.status(500).json(err)
+    }
+})
+
+router.get("/:id", async (req, res) => {
+    try {
+        const invoiceData = await Invoice.findOne({
+            where: {
+                id: req.params.id
+            }
+        })
+
+        if(!invoiceData) {
+            res.status(200).json({message: "No Data found with that ID!"})
+        }
+        res.status(200).json(invoiceData)
+    } catch (err) {
+        console.log(err)
+        res.status(500).json(err)
+    }
+})
+
+
+router.get("/department/:deptId", async (req, res) => {
+    try {
+        const invoiceData = await Invoice.findAll({
+            where: {
+                department_id: req.params.deptId
+            }
+        })
+
+        if(!invoiceData) {
+            res.status(200).json({message: "No Data found with that ID!"})
+        }
+        res.status(200).json(invoiceData)
+    } catch (err) {
+        console.log(err)
+        res.status(500).json(err)
+    }
+})
+
 
 router.post('/', async (req, res) => {
     try {

@@ -1,28 +1,16 @@
 <h1>Add a Wholesaler!</h1>
 
 <div class = 'addWholeSaler'>
-    <label for="business_name">
-        Business Name
-    </label>
-    <br />
-    <textarea id="business_name" name="business_name" rows="5" cols="'30">
-
-    </textarea>
-
-    <label for="email_name">
-        Email
-    </label>
-    <br />
-    <input type="email" id="email" size="30" required>
-
-    <label for="phone_name">
-        Phone Number
-    </label>
-    <br />
-   <input type="tel" id="phone" name="phone"
+    <form id="wholesaler-form">
+    <label for="wholesaler">Wholesaler Name: </label>
+            <input type="text" id="wholesaler">
+    <label for="email">Email: </label>
+            <input type="email" id="email" size="30" required>
+    <label for="phonenumber">Phone Number: </label>
+            <input type="tel" id="phone" name="phone"
        pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}"
        required>
-    
+    </form>
     
 </div>
 

@@ -1,22 +1,13 @@
-<!--TODO: add dimensions, layouts, and confirm syntax in relation to handlebars -->
-
 <div class="container">
-
-<div class ="invoice-card">
-    {{invoiceID}}
-    {{wholesaler_name}}
-    {{description}}
-    {{pay_date}}
-
-</div>
-<button id="editBtn">Edit</button>
-
-</div>
-
-<div class="container">
-    
-    <button id="paidBtn">Paid</button>
-    <button id="ulBtn">Upload</button>
-    <button id="viewBtn">View</button>
-
+    <div id="invoice">
+        {{#each user.invoice}}
+          <div>
+            <p>Invoice #: {{invoice_id}}</p>
+            <p>Wholesaler Name: {{wholesaler}}</p>
+            <p>Description: {{descripton}}</p>
+            <p>Amount: {{amount}}</p>
+            <p>Pay by Date: {{payby}}</p>
+          </div>
+        {{/each}}
+    </div>
 </div>
