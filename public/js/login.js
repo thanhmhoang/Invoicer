@@ -1,10 +1,10 @@
 const form = document.querySelector("#login-form");
-const userType = document.querySelector("#user-type");
 
 const login = async (e) => {
+    e.preventDefault();
   // user login
-  if (userType.checked) {
-    const response = await fetch("/api/user/login", {
+  if (true) {
+    const response = await fetch("/api/users/login", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({
@@ -12,8 +12,9 @@ const login = async (e) => {
         password: document.querySelector("#password-input").value,
       }),
     });
+    console.log(response)
     if (response.status === 200) {
-      window.location.assign("/login")
+      window.location.assign("/homepage")
     } else {
       alert("Please input a valid username and password.")
     }

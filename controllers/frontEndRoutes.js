@@ -6,48 +6,6 @@ router.get('/', (req, res) => {
     res.render('login');
 });
 
-// creating wholesaler
-router.post("/", async (req, res) => {
-    Invoice.findAll({
-        include: [User]
-    }).then(invData => {
-        const hbsData = invData.map(inv => inv.get({ plain: true }));
-        console.log(hbsData);
-        res.render("logs", {
-            allInvoices: hbsData,
-            logged_in: req.session.logged_in
-        })
-    })
-});
-
-// creating invoice
-router.post("/", async (req, res) => {
-    Invoice.findAll({
-        include: [User]
-    }).then(invData => {
-        const hbsData = invData.map(inv => inv.get({ plain: true }));
-        console.log(hbsData);
-        res.render("logs", {
-            allInvoices: hbsData,
-            logged_in: req.session.logged_in
-        })
-    })
-});
-
-// generate invoices
-router.get("/invoice", async (req, res) => {
-    Invoice.findAll({
-        include: [User]
-    }).then(invData => {
-        const hbsData = invData.map(inv => inv.get({ plain: true }));
-        console.log(hbsData);
-        res.render("logs", {
-            allInvoices: hbsData,
-            logged_in: req.session.logged_in
-        })
-    })
-});
-
 router.get("/login", async (req, res) => {
     if (req.session.logged_in) {
         return res.redirect("/homepage")
@@ -55,25 +13,6 @@ router.get("/login", async (req, res) => {
     res.render("login", {
         logged_in: req.session.logged_in
     })
-});
-
-router.post('/login', (req, res) => {
-    const { email, password } = req.body;
-  
-    User.findOne({ where: { email, password } })
-      .then((user) => {
-        if (user) {
-          req.session.userId = user.id; 
-          req.session.logged_in = true;
-          res.redirect('/homepage');
-        } else {
-          res.redirect('/login');
-        }
-      })
-      .catch((err) => {
-        console.error('Please enter a valid username and password', err);
-        res.redirect('/login');
-      });
 });
 
 router.get("/signup", (req, res) => {
@@ -89,19 +28,52 @@ router.get("/signup", (req, res) => {
     }
 });
 
-router.post('/signup', (req, res) => {
-    const { email, password } = req.body;
-
-    User.create({ email, password })
-        .then(() => {
-            req.session.userId = user.id; 
-            req.session.logged_in = true;
-            res.redirect('/homepage');
-        })
-        .catch((err) => {
-            console.error('Error creating user', err);
-            res.redirect('/signup');
-        });
+// show homepage
+router.get('/homepage', (req, res) => {
+    if (!req.session.logged_in) {
+      return res.redirect('/login');
+    }
+    res.render('homepage', {
+      logged_in: true,
+      user: req.session.user 
+    });
 });
+
+// add wholesaler page
+router.get('/addwholesaler', (req, res) => {
+    if (!req.session.logged_in) {
+      return res.redirect('/login');
+    }
+    res.render('wholesaler', {
+      logged_in: true,
+      user: req.session.user 
+    });
+});
+
+// add invoice page
+router.get('/addinvoice', (req, res) => {
+    if (!req.session.logged_in) {
+      return res.redirect('/login');
+    }
+    res.render('invoice', {
+      logged_in: true,
+      user: req.session.user 
+    });
+});
+
+// generate invoices
+router.get("/invoices", async (req, res) => {
+    Invoice.findAll({
+        include: [User]
+    }).then(invData => {
+        const hbsData = invData.map(inv => inv.get({ plain: true }));
+        console.log(hbsData);
+        res.render("logs", {
+            allInvoices: hbsData,
+            logged_in: req.session.logged_in
+        })
+    })
+});
+
 
 module.exports = router;
