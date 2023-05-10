@@ -18,4 +18,5 @@ const submit = async (e) => {
     console.log(response);
   };
   
-  pigForm.addEventListener("submit", submit);
+  invoiceForm.addEventListener("submit", submit);
+

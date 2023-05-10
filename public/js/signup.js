@@ -1,4 +1,4 @@
-const form = document.querySelector("#login-form");
+const form = document.querySelector("#signup-form");
 const userType = document.querySelector("#user-type");
 
 const signup = async (e) => {
@@ -20,4 +20,4 @@ const signup = async (e) => {
   } 
 };
 
-form.addEventListener("submit", signup);
+signUpForm.addEventListener("submit", signup);

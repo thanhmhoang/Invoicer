@@ -21,3 +21,7 @@ const login = async (e) => {
 };
 
 form.addEventListener("submit", login);
+
+function homeFunction() {
+    window.location.href="views\homepage.handlebars";
+  }
