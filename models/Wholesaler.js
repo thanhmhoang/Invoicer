@@ -25,7 +25,7 @@ Wholesaler.init(
             }
         },
         phone: {
-            type: DataTypes.INTEGER,
+            type: DataTypes.STRING,
             allowNull: false,
             unique: true,
             validate: {
