@@ -8,7 +8,7 @@ router.get("/", async (req,res)=>{
     }).then(invData=>{
         const hbsData = invData.map(inv=>inv.get({plain:true}));
         console.log(hbsData);
-        res.render("home",{
+        res.render("homepage",{
             allInvoices:hbsData,
             logged_in: req.session.logged_in
         })
