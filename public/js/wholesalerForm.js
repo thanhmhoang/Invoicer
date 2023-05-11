@@ -8,9 +8,9 @@ const submit = async (e) => {
         "Content-Type": "application/json",
       },
       body: JSON.stringify({
-        name: document.querySelector("#name-input").value,
-        email: document.querySelector("#email-input").value,
-        phone: document.querySelector("#phone-input").value,
+        name: document.querySelector("#wholesaler").value,
+        email: document.querySelector("#email").value,
+        phone: document.querySelector("#phone").value,
       }),
     });
     console.log(response);

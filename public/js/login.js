@@ -1,4 +1,4 @@
-const form = document.querySelector("#login-form");
+const loginForm = document.querySelector("#login-form");
 
 const login = async (e) => {
     e.preventDefault();
@@ -8,12 +8,13 @@ const login = async (e) => {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({
-        username: document.querySelector("#username-input").value,
-        password: document.querySelector("#password-input").value,
+        username: document.querySelector("#login-username-input").value,
+        password: document.querySelector("#login-password-input").value,
       }),
     });
     console.log(response)
     if (response.status === 200) {
+      console.log("login redirect");
       window.location.assign("/homepage")
     } else {
       alert("Please input a valid username and password.")
@@ -21,8 +22,4 @@ const login = async (e) => {
   } 
 };
 
-form.addEventListener("submit", login);
-
-function homeFunction() {
-    window.location.href="views\homepage.handlebars";
-  }
+loginForm.addEventListener("submit", login);
