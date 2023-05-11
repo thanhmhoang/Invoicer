@@ -73,5 +73,19 @@ router.post('/logout', (req, res) => {
     }
 });
 
+router.post('/signup', (req, res) => {
+    const { email, password } = req.body;
+
+    User.create({ email, password })
+        .then((user) => {
+            req.session.userId = user.id; 
+            req.session.logged_in = true;
+            res.redirect('/homepage');
+        })
+        .catch((err) => {
+            console.error('Error creating user', err);
+            res.redirect('/signup');
+        });
+});
 
 module.exports = router;

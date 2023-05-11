@@ -1,52 +1,28 @@
-const loginFormHandler = async (event) => {
-    event.preventDefault();
+const form = document.querySelector("#login-form");
 
-    // Collect values from the login form
-    const username = document.querySelector('#username-login').value.trim();
-    const password = document.querySelector('#password-login').value.trim();
-
-    if (email && password) {
-        // Send a POST request to the API endpoint
-        const response = await fetch('/api/users/login', {
-            method: 'POST',
-            body: JSON.stringify({ username, password }),
-            headers: { 'Content-Type': 'application/json' },
-        });
-
-        if (response.ok) {
-            // If successful, redirect the browser to the profile page
-            document.location.replace('/homepage');
-        } else {
-            alert('Failed to login');
-        }
+const login = async (e) => {
+    e.preventDefault();
+  // user login
+  if (true) {
+    const response = await fetch("/api/users/login", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({
+        username: document.querySelector("#username-input").value,
+        password: document.querySelector("#password-input").value,
+      }),
+    });
+    console.log(response)
+    if (response.status === 200) {
+      window.location.assign("/homepage")
+    } else {
+      alert("Please input a valid username and password.")
     }
+  } 
 };
 
-const signupFormHandler = async (event) => {
-    event.preventDefault();
+form.addEventListener("submit", login);
 
-    const name = document.querySelector('#username-signup').value.trim();
-    const password = document.querySelector('#password-signup').value.trim();
-
-    if (name && email && password) {
-        const response = await fetch('/api/users', {
-            method: 'POST',
-            body: JSON.stringify({ username, password }),
-            headers: { 'Content-Type': 'application/json' },
-        });
-
-        if (response.ok) {
-            document.location.replace('/homepage');
-        } else {
-            alert('Failed to sign up');
-        }
-    }
-};
-
-document
-    .querySelector('.login-form')
-    .addEventListener('submit', loginFormHandler);
-
-document
-    .querySelector('.signup-form')
-    .addEventListener('submit', signupFormHandler);
+function homeFunction() {
+    window.location.href="views\homepage.handlebars";
+  }
