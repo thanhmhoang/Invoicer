@@ -21,9 +21,6 @@ Invoice.init(
         description: {
             type: DataTypes.STRING,
             allowNull: false,
-            validate: {
-                max: 30,
-            },
         },
         pay_amount: {
             type: DataTypes.INTEGER,

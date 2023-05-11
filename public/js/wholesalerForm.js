@@ -2,7 +2,7 @@ const wholesalerForm = document.querySelector("#wholesaler-form");
 
 const submit = async (e) => {
     e.preventDefault();
-    const response = await fetch("/api/wholesaler", {
+    const response = await fetch("/api/wholesalers", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
