@@ -1,6 +1,6 @@
 [
     {
-      "invoice_num": "12345",
+      "invoice_id": "12345",
       "description": "50lbs of Potatoes, 25lbs of Red Onions, 10lbs of Asparagus",
       "pay_amount": 500,
       "pay_date": "6-15-23",
