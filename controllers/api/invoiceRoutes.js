@@ -1,9 +1,11 @@
 const router = require('express').Router();
-const { Invoice, Department } = require('../../models');
+const { Invoice, Department, Wholesaler } = require('../../models');
 
 router.get("/", async (req, res) => {
     try {
-        const invoiceData = await Invoice.findAll()
+        const invoiceData = await Invoice.findAll({
+            include: {all: true, nested: true}
+        })
         res.status(200).json(invoiceData)
     } catch (err) {
         console.log(err)
