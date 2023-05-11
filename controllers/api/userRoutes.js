@@ -63,15 +63,15 @@ router.post('/login', async (req, res) => {
     }
 });
 
-router.post('/logout', (req, res) => {
-    if (req.session.loggedIn) {
-        req.session.destroy(() => {
-            res.status(204).end();
-        });
-    } else {
-        res.status(404).end();
+router.delete('/logout', (req,res) => {
+    try {
+      req.session.destroy()
+      res.status(200).json({msg:"logged out successfully"})
+    } catch (error) {
+      console.log(error)
+      res.status(500).json(error)
     }
-});
+  })
 
 router.post('/signup', (req, res) => {
     const { email, password } = req.body;

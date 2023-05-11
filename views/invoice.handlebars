@@ -2,26 +2,40 @@
 
 <h1>Add an Invoice</h1>
     <div>
+        {{!-- <h3>Pick a Wholesaler</h3>
+            <select>
+                {{#each wholesaler}}
+                <option value="{{this.wholesalerId}}">{{this.wholesalerName}}</option>
+                {{/each}}
+            </select>
+
+        <h3>Pick a Department</h3>
+            <select>
+                {{#each department}}
+                <option value="{{this.departmentId}}">{{this.departmentName}}</option>
+                {{/each}}
+            </select>     --}}
         <form id="invoice-form">
             <label for="invoice_id">Invoice #: </label>
             <input type="text" id="invoice_id">
             <label for="wholesaler">Wholesaler Name: </label>
             <input type="text" id="wholesaler">
             <label for="descripton">Description: </label>
-            <input type="text" id="descripton">
+            <input type="text" id="description">
             <label for="pay_amount">Amount: </label>
             <input type="text" id="pay_amount">
             <label for="pay_date">Pay by Date: </label>
             <input type="text" id="pay_date">
             <label for="department_id">Department #: </label>
             <input type="text" id="department_id">
+            <button type="submit">Submit</button>
          </form>
     </div>
 
-<p><button type="submit">Submit</button></p>
-<p><a href="/logs" class="button-link">View All Invoices</a></p>
-<p><a href="/images" class="button-link">Upload Invoice</a></p>  
-<p><a href="/homepage" class="button-link">Home</a></p> 
+
+<p><a href="logs" class="button-link">View All Invoices</a></p>
+<p><a href="images" class="button-link">Upload Invoice</a></p>  
+<p><a href="homepage" class="button-link">Home</a></p> 
 
 
-<script src = 'public\js\invoiceForm.js'></script>
+<script src = 'js/invoiceForm.js'></script>
