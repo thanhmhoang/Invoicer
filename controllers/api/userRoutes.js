@@ -79,7 +79,7 @@ router.post('/signup', (req, res) => {
     User.create({ email, password })
         .then((user) => {
             req.session.userId = user.id; 
-            req.session.logged_in = true;
+            req.session.loggedIn = true;
             res.redirect('/homepage');
         })
         .catch((err) => {
