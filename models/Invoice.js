@@ -11,7 +11,7 @@ Invoice.init(
             primaryKey: true,
             autoIncrement: true,
         },
-        invoice_num: {
+        invoice_id: {
             type: DataTypes.INTEGER,
             allowNull: false,
             validate: {
