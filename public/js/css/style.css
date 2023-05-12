@@ -1,0 +1,253 @@
+
+/* Is there a way to get background image to resize better w/ responsive design? */
+body {
+    background-color: #000000;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 2000 1500'%3E%3Cdefs%3E%3Cellipse fill='none' stroke-width='200' id='a' rx='600' ry='450'/%3E%3C/defs%3E%3Cg style='transform-origin:center'%3E%3Cg transform='' style='transform-origin:center'%3E%3Cg transform='rotate(-128 0 0)' style='transform-origin:center'%3E%3Cg transform='translate(1000 750)'%3E%3Cuse stroke='%2309080F' href='%23a' transform='rotate(-48 0 0) scale(0.52)'/%3E%3Cuse stroke='%230c0a16' href='%23a' transform='rotate(-40 0 0) scale(0.6)'/%3E%3Cuse stroke='%230f0d1b' href='%23a' transform='rotate(-32 0 0) scale(0.68)'/%3E%3Cuse stroke='%23110f21' href='%23a' transform='rotate(-24 0 0) scale(0.76)'/%3E%3Cuse stroke='%23121126' href='%23a' transform='rotate(-16 0 0) scale(0.84)'/%3E%3Cuse stroke='%2312122c' href='%23a' transform='rotate(-8 0 0) scale(0.92)'/%3E%3Cuse stroke='%23131431' href='%23a' transform=''/%3E%3Cuse stroke='%23131537' href='%23a' transform='rotate(8 0 0) scale(1.08)'/%3E%3Cuse stroke='%2313163d' href='%23a' transform='rotate(16 0 0) scale(1.16)'/%3E%3Cuse stroke='%23141743' href='%23a' transform='rotate(24 0 0) scale(1.24)'/%3E%3Cuse stroke='%23141849' href='%23a' transform='rotate(32 0 0) scale(1.32)'/%3E%3Cuse stroke='%2313194f' href='%23a' transform='rotate(40 0 0) scale(1.4)'/%3E%3Cuse stroke='%23131b55' href='%23a' transform='rotate(48 0 0) scale(1.48)'/%3E%3Cuse stroke='%23121c5b' href='%23a' transform='rotate(56 0 0) scale(1.56)'/%3E%3Cuse stroke='%23121d62' href='%23a' transform='rotate(64 0 0) scale(1.64)'/%3E%3Cuse stroke='%23111e68' href='%23a' transform='rotate(72 0 0) scale(1.72)'/%3E%3Cuse stroke='%23101f6e' href='%23a' transform='rotate(80 0 0) scale(1.8)'/%3E%3Cuse stroke='%230e2075' href='%23a' transform='rotate(88 0 0) scale(1.88)'/%3E%3Cuse stroke='%230d217b' href='%23a' transform='rotate(96 0 0) scale(1.96)'/%3E%3Cuse stroke='%230b2281' href='%23a' transform='rotate(104 0 0) scale(2.04)'/%3E%3Cuse stroke='%23092288' href='%23a' transform='rotate(112 0 0) scale(2.12)'/%3E%3Cuse stroke='%2307238e' href='%23a' transform='rotate(120 0 0) scale(2.2)'/%3E%3Cuse stroke='%23052495' href='%23a' transform='rotate(128 0 0) scale(2.28)'/%3E%3C/g%3E%3C/g%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+    background-attachment:fixed;
+    background-size: cover;
+}
+
+.navbar-header h1 {
+  font-size: 85px;
+  margin-top: 75px;
+  margin-bottom: 0%;
+}
+
+h1 {
+    margin-top: 50px;
+    margin-bottom: 30px;
+    font-size:50px;
+    color:white;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    text-align: center;
+    text-shadow: -1px 1px 2px rgb(1, 5, 41),
+    1px 2px 6px rgb(1, 5, 41),
+    1px -1px 0 rgb(1, 5, 41),
+    -1px -1px 0 rgb(1, 5, 41);
+    width: 100vw;
+    position: relative;
+    left: 50%;
+    margin-left: -50vw;
+}
+
+.container {
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    display: block;
+    width: 30%;
+}
+
+.outer-container {
+    display: flex;
+    flex-direction: row;
+    height: auto;
+    max-width: 100%
+}
+
+/* .infoman {
+
+} */
+
+.manlyman {
+    display: flex;
+    flex-direction: row;
+    height: auto;
+    max-width: 100%
+}
+
+.navbar-header {
+    color: white;
+    font-size: 25px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    align-items: center;
+}
+
+.nav-list {
+    list-style-type: none;
+}
+
+#signup-form, #login-form {
+    color: white;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+button {
+    margin-top: 15px;
+    background-color:rgba(49, 38, 211, 0.596);
+    color: white;
+    font-size: 50px;
+    text-shadow: -1px 1px 2px rgb(1, 5, 41),
+                  1px 2px 6px rgb(1, 5, 41),
+                  1px -1px 0 rgb(1, 5, 41),
+                 -1px -1px 0 rgb(1, 5, 41);
+    border:none; 
+    border-radius:10px; 
+    padding:15px;
+    min-height:30px; 
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 32px;
+    cursor: pointer;
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+button:hover {
+    background-color: transparent;
+    transition: 0.5s;
+}
+
+ /* hamburger & burger list styling */
+.circlecheck {
+    display: none;
+  }
+  
+#hamburgerfont {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+  }
+  
+.burger {
+    background-color: white;
+    box-shadow: 0 25px 75px black;
+    position: relative;
+    height: 40px;
+    width: 40px;
+    border-radius: 50vh;
+    position:fixed;
+    top: 3.5%; 
+    right: 3.5%; 
+    z-index: 2000;
+    text-align: center; 
+    cursor: pointer;
+  }
+  
+.background {
+    position: fixed;
+    top: 4%; 
+    right: 4%;   
+    height: 25px;
+    width: 25px;
+    border-radius: 50%;
+    background-image: radial-gradient(rgba(49, 38, 211, 0.863),black);
+    transition: transform 1s 
+  }
+  
+.nav {
+    height: 150vh;
+    position: fixed;
+    top: 0;
+    right: -60%;
+    transition: all 2s;
+  }
+  
+.list {
+    font-family: cursive;
+    position: absolute;
+    top: 10%;
+    left: 71%;
+    width: 50%;
+    transform: translate(-50%, -50%);
+    list-style: none;
+    text-align:right;
+  }
+  
+.link {
+    color: white;
+    font-size: 14px;
+    text-shadow: -1px 1px 2px rgb(1, 5, 41),
+    1px 2px 6px rgb(1, 5, 41),
+    1px -1px 0 rgb(1, 5, 41),
+    -1px -1px 0 rgb(1, 5, 41);
+  }
+
+.item {
+    margin:0%;
+    color: white;
+  }
+  
+.link:hover,
+.link:active {
+    color: white;
+    cursor: pointer;
+  }
+  
+.circlecheck:checked ~ .background {
+    transform: scale(16);
+  }
+.circlecheck:checked ~ .nav {
+    width: 100%;
+    right: 0;
+  }
+  
+.buns {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+  
+.buns,
+.buns::before,
+.buns::after {
+    width: 20px;
+    height: 3px;
+    background-color: rgba(35, 21, 117, 0.815);
+    display: inline-block;
+  }
+  
+.buns::before {
+    transition: all 0.5s;
+    content: "";
+    position: absolute;
+    left: 0;  
+    top: -0.5rem;
+  }
+.buns::after {
+    transition: all 0.5s;
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0.5rem;
+  }
+  
+.circlecheck:checked + .burger .buns {
+    background-color: transparent;
+  }
+  
+.circlecheck:checked + .burger .buns::before {
+    top: 0;
+    transform: rotate(135deg);
+  }
+  
+.circlecheck:checked + .burger .buns::after {
+    top: 0;
+    transform: rotate(-135deg);
+  } 
+
+  @media screen and (max-width: 768px) {
+    main {
+    flex-direction: column;
+  }
+  }
+  @media only screen and (min-width: 768px) {
+ 
+    .col-1 {width: 8.33%;}
+    .col-2 {width: 16.66%;}
+    .col-3 {width: 25%;}
+    .col-4 {width: 33.33%;}
+    .col-5 {width: 41.66%;}
+    .col-6 {width: 50%;}
+    .col-7 {width: 58.33%;}
+    .col-8 {width: 66.66%;}
+    .col-9 {width: 75%;}
+    .col-10 {width: 83.33%;}
+    .col-11 {width: 91.66%;}
+    .col-12 {width: 100%;}
+  }
