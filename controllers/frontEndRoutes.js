@@ -47,7 +47,7 @@ router.get('/homepage', (req, res) => {
 // add wholesaler page
 router.get('/addwholesaler', (req, res) => {
     console.log("testing");
-    if (!req.session.userId) {
+    if (!req.session.loggedIn) {
        return res.redirect('/login');
     }
     res.render('wholesaler', {
@@ -81,5 +81,15 @@ router.get("/invoices", async (req, res) => {
     })
 });
 
+// add invoice page
+router.get('/invoicelogs', (req, res) => {
+    if (!req.session.loggedIn) {
+      return res.redirect('/login');
+    }
+    res.render('logs', {
+      loggedIn: true,
+      user: req.session.user 
+    });
+});
 
 module.exports = router;
