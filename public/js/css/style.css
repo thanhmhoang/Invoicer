@@ -42,6 +42,10 @@ h1 {
     max-width: 100%
 }
 
+/* .infoman {
+
+} */
+
 .manlyman {
     display: flex;
     flex-direction: row;
