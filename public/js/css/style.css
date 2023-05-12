@@ -5,27 +5,30 @@ body {
     background-size: cover;
 }
 
-.navbar-header h1 {
-  font-size: 85px;
-  margin-top: 75px;
-  margin-bottom: 0%;
+h1 {
+  margin-top: 50px;
+  margin-bottom: 30px;
+  font-size:50px;
+  color:white;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  text-align: center;
+  text-shadow: -1px 1px 2px rgb(1, 5, 41),
+  1px 2px 6px rgb(1, 5, 41),
+  1px -1px 0 rgb(1, 5, 41),
+  -1px -1px 0 rgb(1, 5, 41);
 }
 
-h1 {
-    margin-top: 50px;
-    margin-bottom: 30px;
-    font-size:50px;
-    color:white;
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
-    text-align: center;
-    text-shadow: -1px 1px 2px rgb(1, 5, 41),
-    1px 2px 6px rgb(1, 5, 41),
-    1px -1px 0 rgb(1, 5, 41),
-    -1px -1px 0 rgb(1, 5, 41);
-    width: 100vw;
-    position: relative;
-    left: 50%;
-    margin-left: -50vw;
+.navbar-header h1 {
+  font-size: 85px;
+  margin-top: 0px;
+  margin-bottom: 0%;
+  line-height: 0;
+}
+
+.navbar-header {
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
 }
 
 .container {
@@ -33,7 +36,6 @@ h1 {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    display: block;
     width: 30%;
 }
 
@@ -44,9 +46,9 @@ h1 {
     max-width: 100%
 }
 
-/* .infoman {
-
-} */
+.infoman {
+    max-width: 67px;
+}
 
 .manlyman {
     display: flex;
@@ -60,6 +62,9 @@ h1 {
     font-size: 25px;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     align-items: center;
+    display: flex;
+    flex-direction: row;
+    margin-top: 75px;
 }
 
 .nav-list {
@@ -119,9 +124,9 @@ button:hover {
     width: 50px;
     border-radius: 50vh;
     position:fixed;
-    top: 3.5%; 
-    right: 3.5%; 
-    /* z-index: 2000; */
+    top: 1.85%; 
+    right: 2.5%; 
+    z-index: 2000;
     text-align: center; 
     cursor: pointer;
   }
@@ -148,8 +153,8 @@ button:hover {
 .list {
     font-family: cursive;
     position: absolute;
-    top: 10%;
-    left: 71%;
+    top: 13%;
+    left: 72%;
     width: 50%;
     transform: translate(-50%, -50%);
     list-style: none;
@@ -158,7 +163,7 @@ button:hover {
   
 .link {
     color: white;
-    font-size: 14px;
+    font-size: 12px;
     text-shadow: -1px 1px 2px rgb(1, 5, 41),
     1px 2px 6px rgb(1, 5, 41),
     1px -1px 0 rgb(1, 5, 41),
@@ -166,7 +171,7 @@ button:hover {
   }
 
 .item {
-    margin:0%;
+    margin:0;
     color: white;
   }
   
@@ -177,7 +182,7 @@ button:hover {
   }
   
 .circlecheck:checked ~ .background {
-    transform: scale(16);
+    transform: scale(14.25);
   }
 .circlecheck:checked ~ .nav {
     width: 100%;
