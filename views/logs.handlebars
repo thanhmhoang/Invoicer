@@ -1,0 +1,13 @@
+<div class="container">
+    <div id="invoice">
+        {{#each user.invoice}}
+          <div>
+            <p>Invoice #: {{invoice_id}}</p>
+            <p>Wholesaler Name: {{wholesaler}}</p>
+            <p>Description: {{descripton}}</p>
+            <p>Amount: {{amount}}</p>
+            <p>Pay by Date: {{payby}}</p>
+          </div>
+        {{/each}}
+    </div>
+</div>
