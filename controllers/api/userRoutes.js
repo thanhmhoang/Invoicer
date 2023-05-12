@@ -73,19 +73,25 @@ router.delete('/logout', (req,res) => {
     }
   })
 
-router.post('/signup', (req, res) => {
+
+router.post('/signup', async (req, res) => {
+  try {
     const { email, password } = req.body;
 
-    User.create({ email, password })
-        .then((user) => {
-            req.session.userId = user.id; 
-            req.session.loggedIn = true;
-            res.redirect('/homepage');
-        })
-        .catch((err) => {
-            console.error('Error creating user', err);
-            res.redirect('/signup');
-        });
+    // Perform input validation
+    if (!email || !password) {
+      return res.status(400).json({ message: "Please provide an email and password." });
+    }
+
+    const user = await User.create({ email, password });
+
+    req.session.userId = user.id;
+    req.session.loggedIn = true;
+    res.sendStatus(200);
+  } catch (error) {
+    console.error('Error creating user', error);
+    res.status(500).json({ message: "Sign up failed. Please try again." });
+  }
 });
 
 module.exports = router;
