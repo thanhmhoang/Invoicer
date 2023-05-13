@@ -1,0 +1,100 @@
+[33m839dd16[m[33m ([m[1;36mHEAD -> [m[1;32mklp-reviews2[m[33m, [m[1;31morigin/dev[m[33m, [m[1;31morigin/HEAD[m[33m, [m[1;32mdev[m[33m)[m Merge pull request #83 from thanhmhoang/hh-final-touches
+[33m1e64414[m updated css file
+[33mf1b2fb2[m resolving conflicts
+[33me831c16[m merge conflicts
+[33mbc9f565[m css saving issues
+[33mfa06828[m[33m ([m[1;31morigin/hh-loginfoundation[m[33m)[m Merge branch 'dev' of github.com:thanhmhoang/Invoicer into hh-loginfoundation
+[33m396117b[m final styling on hamburger and header
+[33m5151b6c[m Merge pull request #79 from thanhmhoang/hh-loginfoundation
+[33m350c1b3[m Merge branch 'dev' of github.com:thanhmhoang/Invoicer into hh-loginfoundation
+[33m9eba5fe[m catching up css to branch
+[33m9e2c764[m Merge pull request #77 from thanhmhoang/tmh-route-fix
+[33m1d5b88e[m[33m ([m[1;31morigin/tmh-route-fix[m[33m)[m route fix
+[33m26593ac[m merge conflicts
+[33mdd77a82[m css issues
+[33m87ab774[m conflict resolution
+[33m5fe044e[m Merge branch 'dev' of github.com:thanhmhoang/Invoicer into dev
+[33m1fce3b3[m hamburger responsive design adjustments
+[33m2550996[m udpating image troubleshooting
+[33m0213fba[m hamburger
+[33m296f2a7[m Merge pull request #76 from thanhmhoang/tmh-fix
+[33m425bf1c[m[33m ([m[1;31morigin/tmh-fix[m[33m)[m fixed invoice submission
+[33m2385383[m merge conflict updates
+[33m2753189[m merge conflict resolution
+[33mcf783b0[m Merge pull request #75 from thanhmhoang/tmh-more-edits
+[33m28b24ea[m[33m ([m[1;31morigin/tmh-more-edits[m[33m)[m Merge branch 'dev' into tmh-more-edits
+[33m6dea848[m Merge pull request #74 from thanhmhoang/klp-ed2
+[33mdd6ad79[m edit with Matt
+[33m9ebaa0e[m[33m ([m[1;31morigin/klp-ed2[m[33m, [m[1;32mklp-ed2[m[33m)[m cloudinary widget
+[33m2a55bbf[m Merge branch 'dev' of github.com:thanhmhoang/Invoicer into dev
+[33m1109d71[m updating css file
+[33m894b2de[m Merge pull request #73 from thanhmhoang/klp-fixbtnlinks
+[33m8fd6cea[m[33m ([m[1;31morigin/klp-fixbtnlinks[m[33m, [m[1;32mklp-fixbtnlinks[m[33m)[m merge issues fixed
+[33m20de9b3[m img widget and information
+[33me5d3bab[m Merge pull request #72 from thanhmhoang/tmh-edits
+[33m3f2ccdf[m[33m ([m[1;31morigin/tmh-edits[m[33m)[m some edits
+[33m2aaed89[m Merge pull request #71 from thanhmhoang/klp-review
+[33m0ac9e3c[m[33m ([m[1;31morigin/klp-review[m[33m, [m[1;32mklp-review[m[33m)[m Merge branch 'dev' into klp-review
+[33m070ef1d[m updated submit links and linking to other pages
+[33m1ac258b[m Merge pull request #70 from thanhmhoang/klp-review
+[33me0efd75[m added buttons/links
+[33mc76a43e[m Merge pull request #69 from thanhmhoang/tmh-frontend
+[33mfb9e746[m[33m ([m[1;31morigin/tmh-frontend[m[33m)[m fixed main page
+[33mb09821d[m Merge pull request #68 from thanhmhoang/handlebars-review
+[33mc08a150[m[33m ([m[1;31morigin/handlebars-review[m[33m, [m[1;32mhandlebars-review[m[33m)[m fix merge issue
+[33m46db79b[m css folder added
+[33m521b0bf[m merge issues
+[33m4b0fc6b[m Merge pull request #67 from thanhmhoang/klp-signup
+[33m44ecbd7[m added css file
+[33m16be24f[m updated handlebars files
+[33m6c67356[m Merge pull request #66 from thanhmhoang/tmh-routes-edit
+[33mc39ac1b[m Merge branch 'dev' into hh-loginfoundation
+[33m6dab5d8[m[33m ([m[1;31morigin/klp-signup[m[33m, [m[1;32mklp-signup[m[33m)[m update
+[33m4a66311[m Merge branch 'dev' of github.com:thanhmhoang/Invoicer into dev
+[33m756305b[m adding in handlebars
+[33m410b945[m[33m ([m[1;31morigin/tmh-routes-edit[m[33m)[m fixed merge
+[33m8a315f4[m working on frontend routes
+[33m7f5c804[m merge conflict
+[33ma810a75[m begining signup
+[33m01a36af[m Merge pull request #65 from thanhmhoang/klp-hnd
+[33m15a2427[m[33m ([m[1;31morigin/klp-hnd[m[33m, [m[1;32mklp-hnd[m[33m)[m added forms for wholesale and invoices
+[33m39ccf6c[m Merge pull request #64 from thanhmhoang/klp-logins
+[33md145a92[m[33m ([m[1;31morigin/klp-logins[m[33m, [m[1;32mklp-logins[m[33m)[m change home to homepage
+[33mf246649[m login info
+[33me94cd5a[m Merge pull request #63 from thanhmhoang/tmh-backend-clean
+[33mb49b60e[m morning update pull
+[33m34c6341[m[33m ([m[1;31morigin/tmh-backend-clean[m[33m)[m clean up routes
+[33m1ebe759[m Merge pull request #62 from thanhmhoang/tmh-edit-backend
+[33m5abe77d[m[33m ([m[1;31morigin/tmh-edit-backend[m[33m)[m edits to backend
+[33m93d0f26[m Merge pull request #59 from thanhmhoang/tmh-frontend-routes
+[33mbde5129[m[33m ([m[1;31morigin/tmh-frontend-routes[m[33m)[m add frontend routes
+[33m61b2974[m Merge pull request #58 from thanhmhoang/tmh-add-seed
+[33m7b37ca6[m[33m ([m[1;31morigin/tmh-add-seed[m[33m)[m seeded data
+[33me480081[m merge conflicts
+[33m0889296[m[33m ([m[1;32mklp-frontend[m[33m)[m Merge pull request #57 from thanhmhoang/klp-form
+[33me97f3df[m[33m ([m[1;31morigin/klp-form[m[33m, [m[1;32mklp-form[m[33m)[m updated merge conflicts
+[33mfe18da2[m Merge pull request #56 from thanhmhoang/tmh-fixed-connection
+[33m3e026d2[m added forms to handlebars
+[33m10713ba[m[33m ([m[1;31morigin/tmh-fixed-connection[m[33m)[m fixed mysql connection
+[33ma4a3250[m updated server changes
+[33m21e8d86[m Merge branch 'dev' of github.com:thanhmhoang/Invoicer into dev
+[33mc4e76d2[m added form  information
+[33m41d0bce[m Merge pull request #55 from thanhmhoang/tmh-seed-data
+[33m4a59caf[m[33m ([m[1;31morigin/tmh-seed-data[m[33m)[m added routes
+[33m98e3612[m Merge pull request #53 from thanhmhoang/klp-handlebarshtml
+[33me3f5043[m finished routes
+[33m40ff88b[m[33m ([m[1;31morigin/klp-handlebarshtml[m[33m, [m[1;32mklp-handlebarshtml[m[33m)[m added base HTMl to all hndbrs files as framework
+[33ma60f0ea[m main hdbs html
+[33m43da4b1[m Merge branch 'dev' of github.com:thanhmhoang/Invoicer into dev
+[33m1815131[m established  login page
+[33m1df2ce6[m Merge pull request #52 from thanhmhoang/tmh-server-js
+[33m515ddeb[m[33m ([m[1;31morigin/tmh-server-js[m[33m)[m add boilerplate to server.js
+[33mb5dd6a0[m Merge pull request #51 from thanhmhoang/tmh-build-models
+[33me28f3a7[m[33m ([m[1;31morigin/tmh-build-models[m[33m)[m finished models
+[33m7615393[m Merge pull request #50 from thanhmhoang/tmh-create-db
+[33m703e134[m[33m ([m[1;31morigin/tmh-create-db[m[33m)[m created db
+[33mdfd7e8c[m[33m ([m[1;31morigin/tmh-config[m[33m)[m Merge pull request #49 from thanhmhoang/tmh-config
+[33me7ef68a[m add sequelize and env
+[33mc4e70fb[m Merge pull request #48 from thanhmhoang/tmh-create-foldersfile
+[33m57c7adc[m[33m ([m[1;31morigin/tmh-create-foldersfile[m[33m)[m add folder/files
+[33m00225c5[m Initial commit
