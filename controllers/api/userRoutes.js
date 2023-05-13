@@ -9,8 +9,7 @@ router.get("/", async (req, res) => {
         console.log(err)
         res.status(500).json(err)
     }
-})
-
+});
 
 router.post('/', async (req, res) => {
     try {
@@ -18,12 +17,10 @@ router.post('/', async (req, res) => {
             username: req.body.username,
             password: req.body.password,
         });
-
         req.session.save(() => {
             req.session.userId = newUser.id;
             req.session.username = newUser.username;
             req.session.loggedIn = true;
-
             res.json(newUser);
         });
     } catch (err) {
@@ -38,24 +35,19 @@ router.post('/login', async (req, res) => {
                 username: req.body.username,
             },
         });
-
         if (!user) {
             res.status(400).json({ message: 'Please enter a valid username and password!' });
             return;
         }
-
         const validPassword = user.checkPassword(req.body.password);
-
         if (!validPassword) {
             res.status(400).json({ message: 'Please enter a valid username and password!' });
             return;
         }
-
         req.session.save(() => {
             req.session.userId = user.id;
             req.session.username = user.username;
             req.session.loggedIn = true;
-
             res.json({ user, message: 'You are now logged in!' });
         });
     } catch (err) {
@@ -71,20 +63,16 @@ router.delete('/logout', (req,res) => {
       console.log(error)
       res.status(500).json(error)
     }
-  })
-
+});
 
 router.post('/signup', async (req, res) => {
   try {
     const { email, password } = req.body;
-
     // Perform input validation
     if (!email || !password) {
       return res.status(400).json({ message: "Please provide an email and password." });
     }
-
     const user = await User.create({ email, password });
-
     req.session.userId = user.id;
     req.session.loggedIn = true;
     res.sendStatus(200);

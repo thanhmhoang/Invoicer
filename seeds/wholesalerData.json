@@ -1,13 +1,13 @@
 [
     {
-      "name": "Walt's Meats",
-      "email": "walt@gmail.com",
+      "name": "Charlie's Produce",
+      "email": "charlie@gmail.com",
       "phone": "2062061234",
       "user_id": 1
     },
     {
-      "name": "Charlie's Produce",
-      "email": "charlie@gmail.com",
+      "name": "Walt's Meats",
+      "email": "walter@gmail.com",
       "phone": "4257891234",
       "user_id": 1
     },
