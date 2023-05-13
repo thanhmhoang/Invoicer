@@ -60,7 +60,14 @@ const submit = async (e) => {
       }),
     });
     console.log(response);
+    document.querySelector("#invoice_id").value= ""
+    document.querySelector("#wholesaler").value= ""
+    document.querySelector("#description").value= ""
+    document.querySelector("#amount").value= ""
+    document.querySelector("#payby").value= ""
+    document.querySelector("#department").value= ""
+    invoiceForm.reset()
   };
   
   invoiceForm.addEventListener("submit", submit);
-
+  

@@ -12,6 +12,7 @@ router.get("/", async (req, res) => {
 })
 
 router.post('/', async (req, res) => {
+    console.log('hello')
     try {
         const wholeSaleData = await Wholesaler.create({
             name: req.body.name,
