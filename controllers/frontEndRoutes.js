@@ -3,21 +3,27 @@ const router = require('express').Router();
 const { Invoice, User, Department, Wholesaler } = require('../models');
 
 router.get('/', (req, res) => {
-    res.render("login", {
-        loggedIn: req.session.loggedIn
-    })
     if (req.session.loggedIn) {
         return res.redirect("/homepage")
     }
+    res.render("login", {
+        loggedIn: req.session.loggedIn
+    })
+    // if (req.session.loggedIn) {
+    //     return res.redirect("/homepage")
+    // }
 });
 
 router.get("/login", async (req, res) => {
-    res.render("login", {
-        loggedIn: req.session.loggedIn
-    })
     if (req.session.loggedIn) {
         return res.redirect("/homepage")
     }
+    res.render("login", {
+        loggedIn: req.session.loggedIn
+    })
+    // if (req.session.loggedIn) {
+    //     return res.redirect("/homepage")
+    // }
 });
 
 router.get("/signup", (req, res) => {
@@ -52,7 +58,7 @@ router.get('/addwholesaler', (req, res) => {
     }
     res.render('wholesaler', {
       loggedIn: true,
-      user: req.session.user 
+      user: req.session.user
     });
 });
 
@@ -63,14 +69,14 @@ router.get('/addinvoice', (req, res) => {
     }
     res.render('invoice', {
       loggedIn: true,
-      user: req.session.user 
+      user: req.session.user
     });
 });
 
 // generate invoices
-router.get("/invoices", async (req, res) => {
+router.get("/invoicelogs", async (req, res) => {
     Invoice.findAll({
-        include: [User]
+        include: [Wholesaler]
     }).then(invData => {
         const hbsData = invData.map(inv => inv.get({ plain: true }));
         console.log(hbsData);
@@ -81,15 +87,22 @@ router.get("/invoices", async (req, res) => {
     })
 });
 
-// add invoice page
-router.get('/invoicelogs', (req, res) => {
-    if (!req.session.loggedIn) {
-      return res.redirect('/login');
-    }
-    res.render('logs', {
-      loggedIn: true,
-      user: req.session.user 
+router.get("/images", (req, res) => {
+    res.render('images', {
+        loggedIn:true, 
+        user: req.session.user
     });
 });
+
+// add invoice page
+// router.get('/invoicelogs', (req, res) => {
+//     if (!req.session.loggedIn) {
+//       return res.redirect('/login');
+//     }
+//     res.render('logs', {
+//       loggedIn: true,
+//       user: req.session.user
+//     });
+// });
 
 module.exports = router;
