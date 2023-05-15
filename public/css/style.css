@@ -45,8 +45,9 @@ body {
   background-color: rgb(151, 151, 151);
 }
 
-each {
-  border-style: solid;
-  border-width: 2px;
-  border-color: black;
+@media screen and (max-width: 600px) {
+  .topnav a {
+    float: none;
+    width: 100%;
+  }
 }
