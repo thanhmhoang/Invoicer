@@ -4,6 +4,12 @@ const Invoice = require("./Invoice");
 const User = require("./User");
 const Wholesaler = require("./Wholesaler");
 
+// // Invoice belongs to Wholesaler
+// Invoice.belongsTo(User, {
+//     foreignKey: "user_id",
+//     onDelete: "CASCADE",
+// });
+
 // Departments belongs to Users
 Department.belongsTo(User, {
     foreignKey: "user_id",

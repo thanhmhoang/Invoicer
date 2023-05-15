@@ -1,6 +1,6 @@
 const invoiceImg = document.querySelector('#invoice-img');
 let picUrl = '';
-
+console.log('test')
 //initialize widget memory for photo upload
 
 var myWidget = cloudinary.createUploadWidget(
@@ -14,12 +14,16 @@ var myWidget = cloudinary.createUploadWidget(
         if (!error && result && result.event === 'success') {
             console.log('Congratulations on your image upload! Here is the information: ', result.info);
             picUrl = result.info.url;
+            let img = document.createElement('img')
+            img.src = result.info.url;
+            document.querySelector(".img-container").appendChild(img)
+
         }
     }
 
 );
 
-document.getElementById('upload_widget').addEventListener(
+document.getElementById('upload_widget_multiple').addEventListener(
     'click',
     function (e) {
         myWidget.open();
@@ -42,6 +46,7 @@ const submit = async (e) => {
         }),
     });
     console.log(response);
+    console.log(picUrl)
 };
 
 invoiceImg.addEventListener('submit', submit);

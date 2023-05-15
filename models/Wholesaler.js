@@ -28,9 +28,7 @@ Wholesaler.init(
             type: DataTypes.STRING,
             allowNull: false,
             unique: true,
-            validate: {
-                isNumeric: true,
-            }
+        
         },
         user_id: {
             type: DataTypes.INTEGER,
