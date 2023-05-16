@@ -7,6 +7,7 @@
   - [Project Description](#description)
   - [Usage](#usage)
   - [What I Learned](#learn)
+  - [Issues](#issues)
   - [Installation Steps](#installation)
   - [Project Features](#features)
   - [Tests](#tests)
@@ -35,21 +36,20 @@
   The biggest issue we ran into was our CSS styling was not working and instead was disrupting the rest of our code. We troubleshot the issue multiple times and even utilized help from resources and people around us. In the end, we got some styling on the page but it was not as well put together as the original work. Please see photos below showing the before (including responsive webpage) and after. 
 
   <img src='public\img\image (1).png'>
-  <p>Before</p>
+  
   <img src='public\img\image (2).png'>
-    <p>Before</p>
+    
   <img src='public\img\image (3).png'> 
-    <p>Before</p>
+    
   <img src='public\img\image (4).png'>
-    <p>Before</p>
+    
 
-[Walk Through](public\img\screenrecord.webm)
+
 
   ## Steps
 
     users must have the following npms installed in order to use this app;
 
-    inquirer@8.2.4
     handlebars-express
     express
     mysql2
@@ -63,6 +63,10 @@
  ## Tests 
 
  testReadMe included--please see demos and photos
+ 
+ [Walkthrough](https://github.com/thanhmhoang/Invoicer/assets/128337826/38bc1d2f-c1cd-471d-832f-dbb87a81fadd)
+ 
+ [Heroku Deployment](https://tmh-invoicer.herokuapp.com/homepage)
 
  ## Future Development Goals
 
